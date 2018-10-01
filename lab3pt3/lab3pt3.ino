@@ -10,7 +10,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   int photoVal = analogRead(photocell);
-  float frequency = map(photoVal, 200,900, 100, 1000);
+  float frequency = map(photoVal, 0,1023, 120, 800);
   Serial.println(photoVal);
   tone(spkr, frequency, 10);
 
